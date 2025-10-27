@@ -1,0 +1,261 @@
+# GPU Mining Automation - Mining Pools Configuration
+# High-yield pools for KAS (Kaspa), RVN (Ravencoin), ZEC (Zcash), ETC (Ethereum Classic)
+# Pools are listed by priority for each coin
+
+# ======================
+# KASPA (KAS) POOLS
+# ======================
+kaspa:
+  coin_symbol: "KAS"
+  algorithm: "KHEAVYHASH"
+  
+  pools:
+    # WoolyPooly - High yield, reliable
+    - name: "WoolyPooly"
+      url: "stratum+tcp://pool.woolypooly.com:3112"
+      ssl_url: "stratum+ssl://pool.woolypooly.com:3113"
+      fee: 0.9  # percentage
+      payout_threshold: 100  # KAS
+      location: "Global"
+      priority: 1
+      
+    # Herominers - Good performance
+    - name: "Herominers"
+      url: "stratum+tcp://kaspa.herominers.com:1206"
+      ssl_url: "stratum+ssl://kaspa.herominers.com:11206"
+      fee: 0.5
+      payout_threshold: 50
+      location: "US/EU"
+      priority: 2
+      
+    # F2Pool - Large pool, stable
+    - name: "F2Pool"
+      url: "stratum+tcp://kaspa.f2pool.com:4100"
+      ssl_url: "stratum+ssl://kaspa.f2pool.com:4101"
+      fee: 2.5
+      payout_threshold: 200
+      location: "Asia/US"
+      priority: 3
+      
+    # K1Pool - Kaspa-focused
+    - name: "K1Pool"
+      url: "stratum+tcp://pool.k1pool.com:3112"
+      ssl_url: "stratum+ssl://pool.k1pool.com:3113"
+      fee: 1.0
+      payout_threshold: 100
+      location: "Global"
+      priority: 4
+
+# ======================
+# RAVENCOIN (RVN) POOLS
+# ======================
+ravencoin:
+  coin_symbol: "RVN"
+  algorithm: "KAWPOW"
+  
+  pools:
+    # 2Miners - Popular and reliable
+    - name: "2Miners"
+      url: "stratum+tcp://rvn.2miners.com:6060"
+      ssl_url: "stratum+ssl://rvn.2miners.com:6061"
+      fee: 1.0
+      payout_threshold: 10
+      location: "Global"
+      priority: 1
+      
+    # WoolyPooly - High yield
+    - name: "WoolyPooly"
+      url: "stratum+tcp://pool.woolypooly.com:55555"
+      ssl_url: "stratum+ssl://pool.woolypooly.com:55556"
+      fee: 0.9
+      payout_threshold: 10
+      location: "Global"
+      priority: 2
+      
+    # Ravenminer - Community pool
+    - name: "Ravenminer"
+      url: "stratum+tcp://stratum.ravenminer.com:3838"
+      ssl_url: "stratum+ssl://stratum.ravenminer.com:3939"
+      fee: 0.5
+      payout_threshold: 5
+      location: "US"
+      priority: 3
+      
+    # FlyPool - Good hashrate
+    - name: "FlyPool"
+      url: "stratum+tcp://rvn-us.flypool.org:3333"
+      ssl_url: "stratum+ssl://rvn-us.flypool.org:13333"
+      fee: 1.0
+      payout_threshold: 50
+      location: "US/EU/Asia"
+      priority: 4
+      
+    # MiningPoolHub - Multi-region
+    - name: "MiningPoolHub"
+      url: "stratum+tcp://us-east.ravencoin.miningpoolhub.com:20549"
+      ssl_url: "stratum+ssl://us-east.ravencoin.miningpoolhub.com:20550"
+      fee: 0.9
+      payout_threshold: 25
+      location: "Global"
+      priority: 5
+
+# ======================
+# ZCASH (ZEC) POOLS
+# ======================
+zcash:
+  coin_symbol: "ZEC"
+  algorithm: "EQUIHASH"
+  
+  pools:
+    # F2Pool - Large and stable
+    - name: "F2Pool"
+      url: "stratum+tcp://zec.f2pool.com:3357"
+      ssl_url: "stratum+ssl://zec.f2pool.com:3358"
+      fee: 2.5
+      payout_threshold: 0.1
+      location: "Global"
+      priority: 1
+      
+    # Herominers - Reliable
+    - name: "Herominers"
+      url: "stratum+tcp://zcash.herominers.com:1102"
+      ssl_url: "stratum+ssl://zcash.herominers.com:11102"
+      fee: 0.5
+      payout_threshold: 0.05
+      location: "US/EU"
+      priority: 2
+      
+    # WoolyPooly - Good performance
+    - name: "WoolyPooly"
+      url: "stratum+tcp://pool.woolypooly.com:3080"
+      ssl_url: "stratum+ssl://pool.woolypooly.com:3088"
+      fee: 0.9
+      payout_threshold: 0.1
+      location: "Global"
+      priority: 3
+      
+    # Flypool - High hashrate
+    - name: "Flypool"
+      url: "stratum+tcp://zec-us.flypool.org:3333"
+      ssl_url: "stratum+ssl://zec-us.flypool.org:13333"
+      fee: 1.0
+      payout_threshold: 0.01
+      location: "US/EU"
+      priority: 4
+      
+    # Nanopool - Popular choice
+    - name: "Nanopool"
+      url: "stratum+tcp://zec-us1.nanopool.org:6666"
+      ssl_url: "stratum+ssl://zec-us1.nanopool.org:16666"
+      fee: 1.0
+      payout_threshold: 0.01
+      location: "Global"
+      priority: 5
+
+# ======================
+# ETHEREUM CLASSIC (ETC) POOLS
+# ======================
+ethereum_classic:
+  coin_symbol: "ETC"
+  algorithm: "ETHASH"
+  
+  pools:
+    # 2Miners - Trusted and reliable
+    - name: "2Miners"
+      url: "stratum+tcp://etc.2miners.com:1010"
+      ssl_url: "stratum+ssl://etc.2miners.com:1011"
+      fee: 1.0
+      payout_threshold: 0.1
+      location: "Global"
+      priority: 1
+      
+    # Ethermine - Large pool
+    - name: "Ethermine"
+      url: "stratum+tcp://us1-etc.ethermine.org:4444"
+      ssl_url: "stratum+ssl://us1-etc.ethermine.org:5555"
+      fee: 1.0
+      payout_threshold: 0.05
+      location: "US/EU/Asia"
+      priority: 2
+      
+    # WoolyPooly - Good yield
+    - name: "WoolyPooly"
+      url: "stratum+tcp://pool.woolypooly.com:35000"
+      ssl_url: "stratum+ssl://pool.woolypooly.com:35001"
+      fee: 0.9
+      payout_threshold: 0.1
+      location: "Global"
+      priority: 3
+      
+    # F2Pool - Stable performance
+    - name: "F2Pool"
+      url: "stratum+tcp://etc.f2pool.com:8118"
+      ssl_url: "stratum+ssl://etc.f2pool.com:8119"
+      fee: 2.5
+      payout_threshold: 0.1
+      location: "Asia/US"
+      priority: 4
+      
+    # Herominers - Low fees
+    - name: "Herominers"
+      url: "stratum+tcp://etc.herominers.com:1025"
+      ssl_url: "stratum+ssl://etc.herominers.com:11025"
+      fee: 0.5
+      payout_threshold: 0.05
+      location: "US/EU"
+      priority: 5
+      
+    # Nanopool - Well-established
+    - name: "Nanopool"
+      url: "stratum+tcp://etc-us-east1.nanopool.org:19999"
+      ssl_url: "stratum+ssl://etc-us-east1.nanopool.org:19433"
+      fee: 1.0
+      payout_threshold: 0.1
+      location: "Global"
+      priority: 6
+
+# ======================
+# POOL SELECTION STRATEGY
+# ======================
+pool_selection:
+  # Strategy: high_yield, low_latency, balanced
+  default_strategy: "high_yield"
+  
+  # Auto-switch to backup pool if primary fails
+  auto_failover: true
+  
+  # Time to wait before switching pools (seconds)
+  failover_timeout: 300
+  
+  # Test pool latency before connecting
+  test_latency: true
+  
+  # Maximum acceptable latency (ms)
+  max_latency_ms: 150
+  
+  # Prefer pools with SSL/TLS
+  prefer_ssl: true
+
+# ======================
+# PERFORMANCE MONITORING
+# ======================
+monitoring:
+  # Track pool performance metrics
+  enabled: true
+  
+  # Metrics to track
+  metrics:
+    - "hashrate"
+    - "accepted_shares"
+    - "rejected_shares"
+    - "latency"
+    - "uptime"
+  
+  # Report interval (minutes)
+  report_interval: 30
+  
+  # Switch pool if performance degrades
+  auto_switch_on_poor_performance: true
+  
+  # Rejection rate threshold for switching (%)
+  max_rejection_rate: 5.0

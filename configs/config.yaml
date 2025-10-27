@@ -1,0 +1,218 @@
+# GPU Mining Automation - Main Configuration File
+# Default settings for rental platforms, mining operations, and automation behavior
+
+# ======================
+# APPLICATION SETTINGS
+# ======================
+app:
+  name: "GPU Mining Automation"
+  version: "1.0.0"
+  environment: "production"  # production, development, testing
+  debug: false
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+# ======================
+# MINING DEFAULTS
+# ======================
+mining:
+  # Default coin to mine
+  default_coin: "KAS"
+  
+  # Auto-switch to most profitable coin
+  auto_switch_enabled: true
+  
+  # Minimum profit margin to trigger coin switch (percentage)
+  min_profit_margin_switch: 5.0
+  
+  # Profitability check interval (minutes)
+  profitability_check_interval: 30
+  
+  # Mining intensity
+  intensity: "high"  # low, medium, high
+  
+  # GPU temperature limits
+  temp_limit_celsius: 75
+  temp_shutdown_celsius: 85
+  
+  # Power management
+  power_limit_watts: 250
+  
+  # Accepted algorithms
+  supported_algorithms:
+    - "KAWPOW"      # Ravencoin
+    - "ETHASH"      # Ethereum Classic
+    - "EQUIHASH"    # Zcash
+    - "KHEAVYHASH"  # Kaspa
+
+# ======================
+# GPU RENTAL PLATFORMS
+# ======================
+rental_platforms:
+  # VastAI Configuration
+  vastai:
+    enabled: true
+    max_hourly_cost: 2.50  # USD
+    min_gpu_memory: 8  # GB
+    preferred_regions:
+      - "US"
+      - "EU"
+    gpu_types:
+      - "RTX 3080"
+      - "RTX 3090"
+      - "RTX 4090"
+      - "RTX 4080"
+    min_reliability_score: 0.95
+    
+  # RunPod Configuration
+  runpod:
+    enabled: true
+    max_hourly_cost: 3.00  # USD
+    min_gpu_memory: 8  # GB
+    preferred_regions:
+      - "US-WEST"
+      - "EU-CENTRAL"
+    gpu_types:
+      - "RTX A4000"
+      - "RTX A5000"
+      - "RTX 3090"
+      - "RTX 4090"
+    
+  # Auto-rental settings
+  auto_rental:
+    enabled: false  # Set to true to enable automatic GPU rental
+    min_profit_margin: 15.0  # Minimum profit percentage before auto-renting
+    max_concurrent_rentals: 5
+    rental_duration_hours: 24
+    stop_loss_threshold: -5.0  # Stop mining if profit drops below this percentage
+
+# ======================
+# PROFITABILITY SETTINGS
+# ======================
+profitability:
+  # Electricity cost (USD per kWh)
+  power_cost_usd_per_kwh: 0.05
+  
+  # Include rental costs in profitability calculations
+  include_rental_costs: true
+  
+  # Minimum acceptable daily profit (USD)
+  min_daily_profit: 5.0
+  
+  # Price data sources
+  price_sources:
+    - "coingecko"
+    - "whattomine"
+    - "coinmarketcap"
+  
+  # Cache price data (minutes)
+  price_cache_duration: 15
+  
+  # Hashrate estimation buffer (percentage reduction for safety)
+  hashrate_safety_margin: 10.0
+
+# ======================
+# POOL SETTINGS
+# ======================
+pools:
+  # Default pool strategy
+  selection_strategy: "high_yield"  # high_yield, low_latency, balanced
+  
+  # Pool failover settings
+  failover_enabled: true
+  failover_timeout_seconds: 300
+  
+  # Default worker name
+  worker_name: "miner01"
+  
+  # Connection retry settings
+  max_connection_retries: 5
+  retry_delay_seconds: 10
+
+# ======================
+# MONITORING & LOGGING
+# ======================
+monitoring:
+  # Enable performance monitoring
+  enabled: true
+  
+  # Metrics collection interval (seconds)
+  metrics_interval: 60
+  
+  # Dashboard settings
+  dashboard:
+    enabled: true
+    port: 8080
+    refresh_interval: 30  # seconds
+  
+  # Logging settings
+  logging:
+    log_to_file: true
+    log_directory: "./logs"
+    log_rotation: "daily"
+    max_log_files: 7
+    log_format: "json"  # json, text
+
+# ======================
+# NOTIFICATIONS
+# ======================
+notifications:
+  # Enable notifications
+  enabled: true
+  
+  # Notification triggers
+  triggers:
+    mining_started: true
+    mining_stopped: true
+    coin_switched: true
+    profit_threshold_exceeded: true
+    error_occurred: true
+    daily_summary: true
+  
+  # Telegram settings
+  telegram:
+    enabled: false
+    send_startup_message: true
+  
+  # Discord settings
+  discord:
+    enabled: false
+    send_startup_message: true
+  
+  # Email settings (optional)
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+
+# ======================
+# ADVANCED SETTINGS
+# ======================
+advanced:
+  # API rate limiting
+  api_rate_limit:
+    requests_per_minute: 60
+    burst_size: 10
+  
+  # Database settings
+  database:
+    type: "sqlite"  # sqlite, postgresql, mysql
+    path: "./data/mining.db"
+    backup_enabled: true
+    backup_interval_hours: 24
+  
+  # Performance tuning
+  performance:
+    worker_threads: 4
+    async_io_enabled: true
+    cache_enabled: true
+  
+  # Security settings
+  security:
+    api_key_rotation_days: 90
+    encrypt_sensitive_data: true
+    
+  # Restart behavior
+  restart:
+    auto_restart_on_error: true
+    max_restart_attempts: 5
+    backoff_seconds: 10

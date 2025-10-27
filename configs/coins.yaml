@@ -1,0 +1,382 @@
+# GPU Mining Automation - Profitable Coins Configuration
+# Coins optimized for SaaS GPU mining with focus on profitability
+# Data includes algorithm, expected hashrate, power consumption, and profitability metrics
+
+# ======================
+# KASPA (KAS)
+# ======================
+kaspa:
+  coin_name: "Kaspa"
+  symbol: "KAS"
+  algorithm: "KHEAVYHASH"
+  
+  # Mining specifications
+  specifications:
+    block_time: 1  # seconds
+    block_reward: 287.5  # KAS (approximate)
+    network_hashrate: "500 PH/s"  # estimated
+    
+  # GPU hashrate estimates (MH/s)
+  gpu_hashrates:
+    "RTX 4090": 1100
+    "RTX 4080": 850
+    "RTX 3090": 850
+    "RTX 3080": 650
+    "RTX 3070": 450
+    "RTX A4000": 500
+    "RTX A5000": 700
+    
+  # Power consumption (Watts)
+  power_consumption:
+    "RTX 4090": 320
+    "RTX 4080": 280
+    "RTX 3090": 330
+    "RTX 3080": 250
+    "RTX 3070": 180
+    "RTX A4000": 140
+    "RTX A5000": 230
+    
+  # Profitability factors
+  profitability:
+    difficulty_adjustment: "per-block"
+    market_cap_rank: 35
+    liquidity: "high"
+    exchange_availability: "excellent"
+    price_volatility: "medium-high"
+    
+  # Recommended for SaaS mining
+  saas_suitability:
+    rating: 9.5  # out of 10
+    reasons:
+      - "High hashrate on modern GPUs"
+      - "Low pool fees available"
+      - "Fast block times = quick payouts"
+      - "Growing ecosystem"
+      - "Good liquidity on exchanges"
+
+# ======================
+# RAVENCOIN (RVN)
+# ======================
+ravencoin:
+  coin_name: "Ravencoin"
+  symbol: "RVN"
+  algorithm: "KAWPOW"
+  
+  specifications:
+    block_time: 60  # seconds
+    block_reward: 5000  # RVN
+    network_hashrate: "12 TH/s"
+    
+  gpu_hashrates:
+    "RTX 4090": 65  # MH/s
+    "RTX 4080": 52
+    "RTX 3090": 55
+    "RTX 3080": 45
+    "RTX 3070": 32
+    "RTX A4000": 35
+    "RTX A5000": 48
+    
+  power_consumption:
+    "RTX 4090": 350
+    "RTX 4080": 300
+    "RTX 3090": 360
+    "RTX 3080": 270
+    "RTX 3070": 200
+    "RTX A4000": 160
+    "RTX A5000": 250
+    
+  profitability:
+    difficulty_adjustment: "per-block"
+    market_cap_rank: 150
+    liquidity: "medium-high"
+    exchange_availability: "good"
+    price_volatility: "high"
+    
+  saas_suitability:
+    rating: 8.5
+    reasons:
+      - "ASIC-resistant algorithm"
+      - "Established mining community"
+      - "Multiple good pools available"
+      - "Asset tokenization platform"
+      - "Regular development updates"
+
+# ======================
+# ZCASH (ZEC)
+# ======================
+zcash:
+  coin_name: "Zcash"
+  symbol: "ZEC"
+  algorithm: "EQUIHASH"
+  
+  specifications:
+    block_time: 75  # seconds
+    block_reward: 3.125  # ZEC
+    network_hashrate: "9 GH/s"
+    
+  gpu_hashrates:
+    "RTX 4090": 195  # Sol/s
+    "RTX 4080": 155
+    "RTX 3090": 140
+    "RTX 3080": 120
+    "RTX 3070": 85
+    "RTX A4000": 90
+    "RTX A5000": 125
+    
+  power_consumption:
+    "RTX 4090": 300
+    "RTX 4080": 260
+    "RTX 3090": 310
+    "RTX 3080": 240
+    "RTX 3070": 180
+    "RTX A4000": 150
+    "RTX A5000": 230
+    
+  profitability:
+    difficulty_adjustment: "2016 blocks"
+    market_cap_rank: 60
+    liquidity: "high"
+    exchange_availability: "excellent"
+    price_volatility: "medium"
+    
+  saas_suitability:
+    rating: 8.0
+    reasons:
+      - "Established cryptocurrency"
+      - "Privacy-focused with strong backing"
+      - "Good GPU efficiency"
+      - "Major exchange listings"
+      - "Long-term project viability"
+
+# ======================
+# ETHEREUM CLASSIC (ETC)
+# ======================
+ethereum_classic:
+  coin_name: "Ethereum Classic"
+  symbol: "ETC"
+  algorithm: "ETHASH"
+  
+  specifications:
+    block_time: 13  # seconds
+    block_reward: 2.56  # ETC
+    network_hashrate: "180 TH/s"
+    
+  gpu_hashrates:
+    "RTX 4090": 120  # MH/s
+    "RTX 4080": 100
+    "RTX 3090": 120
+    "RTX 3080": 100
+    "RTX 3070": 62
+    "RTX A4000": 65
+    "RTX A5000": 95
+    
+  power_consumption:
+    "RTX 4090": 300
+    "RTX 4080": 250
+    "RTX 3090": 290
+    "RTX 3080": 220
+    "RTX 3070": 130
+    "RTX A4000": 140
+    "RTX A5000": 200
+    
+  profitability:
+    difficulty_adjustment: "dynamic"
+    market_cap_rank: 30
+    liquidity: "high"
+    exchange_availability: "excellent"
+    price_volatility: "medium"
+    
+  saas_suitability:
+    rating: 8.0
+    reasons:
+      - "Proven ETHASH algorithm"
+      - "Large market cap and liquidity"
+      - "Many pool options"
+      - "Stable network"
+      - "Good exchange support"
+
+# ======================
+# ERGO (ERG)
+# ======================
+ergo:
+  coin_name: "Ergo"
+  symbol: "ERG"
+  algorithm: "AUTOLYKOS"
+  
+  specifications:
+    block_time: 120  # seconds
+    block_reward: 51  # ERG
+    network_hashrate: "45 TH/s"
+    
+  gpu_hashrates:
+    "RTX 4090": 430  # MH/s
+    "RTX 4080": 340
+    "RTX 3090": 260
+    "RTX 3080": 210
+    "RTX 3070": 165
+    "RTX A4000": 180
+    "RTX A5000": 240
+    
+  power_consumption:
+    "RTX 4090": 280
+    "RTX 4080": 240
+    "RTX 3090": 270
+    "RTX 3080": 220
+    "RTX 3070": 160
+    "RTX A4000": 140
+    "RTX A5000": 210
+    
+  profitability:
+    difficulty_adjustment: "per-block"
+    market_cap_rank: 120
+    liquidity: "medium"
+    exchange_availability: "good"
+    price_volatility: "high"
+    
+  saas_suitability:
+    rating: 7.5
+    reasons:
+      - "GPU-friendly algorithm"
+      - "Active development"
+      - "DeFi ecosystem"
+      - "Scientific approach"
+      - "Growing community"
+
+# ======================
+# FLUX (FLUX)
+# ======================
+flux:
+  coin_name: "Flux"
+  symbol: "FLUX"
+  algorithm: "ZELASH"
+  
+  specifications:
+    block_time: 120  # seconds
+    block_reward: 37.5  # FLUX
+    network_hashrate: "35 MS/s"
+    
+  gpu_hashrates:
+    "RTX 4090": 140  # Sol/s
+    "RTX 4080": 110
+    "RTX 3090": 105
+    "RTX 3080": 90
+    "RTX 3070": 65
+    "RTX A4000": 70
+    "RTX A5000": 95
+    
+  power_consumption:
+    "RTX 4090": 310
+    "RTX 4080": 270
+    "RTX 3090": 300
+    "RTX 3080": 230
+    "RTX 3070": 170
+    "RTX A4000": 150
+    "RTX A5000": 220
+    
+  profitability:
+    difficulty_adjustment: "per-block"
+    market_cap_rank: 140
+    liquidity: "medium"
+    exchange_availability: "good"
+    price_volatility: "high"
+    
+  saas_suitability:
+    rating: 7.5
+    reasons:
+      - "Web3 cloud infrastructure"
+      - "Parallel asset to mining"
+      - "Multiple revenue streams"
+      - "Active ecosystem"
+      - "GPU-optimized"
+
+# ======================
+# COIN COMPARISON METRICS
+# ======================
+comparison:
+  # Profitability ranking (higher is better)
+  profitability_rank:
+    1: "kaspa"
+    2: "ravencoin"
+    3: "ethereum_classic"
+    4: "zcash"
+    5: "ergo"
+    6: "flux"
+    
+  # Power efficiency ranking
+  efficiency_rank:
+    1: "ergo"
+    2: "kaspa"
+    3: "ethereum_classic"
+    4: "zcash"
+    5: "ravencoin"
+    6: "flux"
+    
+  # Liquidity ranking
+  liquidity_rank:
+    1: "ethereum_classic"
+    2: "zcash"
+    3: "kaspa"
+    4: "ravencoin"
+    5: "ergo"
+    6: "flux"
+    
+  # Overall SaaS recommendation
+  saas_recommendation:
+    primary: "kaspa"
+    secondary: "ravencoin"
+    tertiary: "ethereum_classic"
+    
+  # Best for different scenarios
+  scenarios:
+    best_for_high_hashrate: "kaspa"
+    best_for_stability: "ethereum_classic"
+    best_for_quick_profits: "ravencoin"
+    best_for_long_term: "zcash"
+    best_for_efficiency: "ergo"
+
+# ======================
+# MARKET DATA SOURCES
+# ======================
+market_data:
+  # API endpoints for real-time data
+  price_sources:
+    - "https://api.coingecko.com/api/v3/simple/price"
+    - "https://api.coinmarketcap.com/v1/ticker"
+    - "https://whattomine.com/coins.json"
+    
+  # Update intervals (minutes)
+  update_intervals:
+    price: 5
+    difficulty: 15
+    network_hashrate: 30
+    profitability: 10
+    
+  # Cache settings
+  cache:
+    enabled: true
+    ttl_minutes: 15
+    
+# ======================
+# AUTO-SWITCHING SETTINGS
+# ======================
+auto_switch:
+  # Enable automatic coin switching
+  enabled: true
+  
+  # Minimum profit difference to trigger switch (%)
+  min_profit_difference: 5.0
+  
+  # Consider these factors for switching
+  factors:
+    - "daily_profit"
+    - "network_difficulty"
+    - "price_trend"
+    - "pool_availability"
+    - "exchange_liquidity"
+    
+  # Coin switch cooldown (minutes)
+  cooldown_minutes: 60
+  
+  # Blacklist coins temporarily if issues detected
+  auto_blacklist: true
+  blacklist_duration_hours: 24
